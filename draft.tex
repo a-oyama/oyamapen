@@ -1,0 +1,59 @@
+%卒論概要テンプレート ver. 3.0
+
+\documentclass[uplatex,twocolumn,dvipdfmx]{jsarticle}
+\usepackage[top=22mm,bottom=22mm,left=22mm,right=22mm]{geometry}
+\setlength{\columnsep}{10mm}
+\usepackage[T1]{fontenc}
+\usepackage{txfonts}
+\usepackage[expert,deluxe]{otf}
+\usepackage[dvipdfmx,hiresbb]{graphicx}
+\usepackage[dvipdfmx]{hyperref}
+\usepackage{pxjahyper}
+\usepackage{secdot}
+
+
+
+
+
+%タイトルと学生番号，名前だけ編集すること
+\title{\vspace{-5mm}\fontsize{14pt}{0pt}\selectfont プロジェクトで使用しているWEBサービスに不具合が発生した場合の影響}
+\author{\normalsize プロジェクトマネジメントコース　矢吹研究室　1442012　岩瀬翔}
+\date{}
+\pagestyle{empty}
+\begin{document}
+\fontsize{10.5pt}{\baselineskip}\selectfont
+\maketitle
+
+
+
+
+
+%以下が本文
+\section{研究の背景}
+複数のメンバが同時に開発を行うソフトウェア開発プロジェクトでは，ファイルの最新バージョンが分からなくなってしまうことがある．似たファイルが複数できてしまったり，同一のファイルに対する更新が競合してしまったりといった問題が発生する．このような問題を解決するため，バージョン管理システムを用いる．バージョン管理システムの一つに，GitHubというWEBサービスがある．企業においてもオープンソースソフトウェアとしてソースコードを公開し，企業内では見つけることの難しかった問題などをより早く発見し修正できるなどの理由から利用されている\cite{01}．
+
+そのGitHubのサーバーが2016年1月28日にダウンし，インターネット上で話題になったというニュースを目にした．実際にGitHubのサーバーダウンについて，Twitterを用いて調べてみたところ「仕事にならない」「卒論が書けない」などといった反応が多く見られた\cite{02}．
+
+GitHubの他にもプロジェクトで使われているWEBサービスは存在する．プロジェクトチーム内でコミュニケーションを取るためのチャットツール「Slack」やユーザレビューなどを行うために使用される「Skype」，チームで作成したファイルを共有できる「Google Drive」などである．これらのWEBサービスにおいても万が一，不具合が発生した場合，GitHubと同様にプロジェクトへの影響が懸念されるのではないかと考えた．
+
+以上のことからプロジェクト進行中にGitHubで不具合が発生した場合，また他にもプロジェクトにおいて広く使われているWEBサービスが不具合を起こした場合，どのような影響が生じ，その対策のために何かできることはないのかと考え研究することとした．
+
+\section{研究の目的}
+本研究の目的は次の3点を目標とする．
+\begin{itemize}
+ \item プロジェクトで使用されるWEBサービスに不具合が発生した場合どのような影響が発生するか特定する．
+ \item プロジェクトで使用されるWEBサービスに不具合が発生した場合どれほどの人に影響が及ぶか調べる．
+ \item WEBサービスの不具合発生に対するリスク対策案を考案する．
+\end{itemize}
+上記の目標を達成することを目的とし研究を行う．
+
+\section{プロジェクトマネジメントとの関連}
+本研究はプロジェクトマネジメントにおける10個の知識エリアのうち，リスクマネジメントに関連付けることができると考える．理由はプロジェクトにおけるWEBサービスの不具合は明確なリスクであるからだ．また，リスク発生に対する対策を考案することができると考えたためである．
+
+\section{研究の方法}
+本研究はTwitterを使用し，サーバーダウンなどの不具合発生に関するツイートをデータとして収集する．集めるデータは背景で述べた「GitHub」「Slack」「Skype」「Google Drive」の不具合発生に対するツイートの数，またどのような影響が発生しているのか，どのような反応があるのか，どのくらいの時間で修正が完了するのかを調べる\cite{03}．その調べた結果を把握した上で，新たなリスク対策案はないのか考察する．
+
+\bibliographystyle{junsrt}
+\bibliography{biblio}%「biblio.bib」というファイルが必要．
+
+\end{document}
