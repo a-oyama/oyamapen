@@ -1,7 +1,7 @@
 <redpen-conf lang="ja" type="zenkaku2">
     <validators>
         <validator name="SentenceLength">
-            <property name="max_len" value="100"/>
+            <property name="max_len" value="120"/>
         </validator>
         <validator name="CommaNumber" />
         <validator name="SuccessiveWord" />
