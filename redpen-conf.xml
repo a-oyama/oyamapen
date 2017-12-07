@@ -1,7 +1,7 @@
 <redpen-conf lang="ja" type="zenkaku2">
     <validators>
         <validator name="JavaScript">
-        <property name="script-path" value="$REDPEN_HOME/js" />
+        <property name="script-path" value="a-oyama/oyamapen/blob/master/./js" />
         </validator>
     </validators>
 </redpen-conf>
