@@ -1,6 +1,6 @@
 <redpen-conf lang="ja" type="zenkaku2">
     <validators>
-        <validator name="JavaScript" >
+        <validator name="JavaScript" />
         </validator>
     </validators>
 </redpen-conf>
