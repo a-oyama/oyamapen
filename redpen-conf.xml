@@ -1,7 +1,7 @@
 <redpen-conf lang="ja" type="zenkaku2">
     <validators>
         <validator name="JavaScript" >
-            <property name="script-path" value="dont-use-kosoado.js." />
+            <property name="script-path" value="draft.tex" />
         </validator>
     </validators>
 </redpen-conf>
