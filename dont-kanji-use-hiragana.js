@@ -1,8 +1,4 @@
 function validateSentence(sentence) {
-    // 参考
-    // https://www.jtf.jp/jp/style_guide/pdf/jtf_style_guide.pdf
-    // 2.2.1. ひらがなと漢字の使い分け
-    // 漢字は「全角」で表記します。漢字の使用は、平成 22 年 11 月 30 日内閣告示第 2 号の「常用漢字表」に原則として準じます。
 
     var terms = [
         {
@@ -62,12 +58,6 @@ function validateSentence(sentence) {
             'expected':'すなわち',
             'pattern':['即ち']
         },
-        /* スタイルガイドにはあるが、実際に使うことはないと思うので削除
-        {
-            'expected':'すべき',
-            'pattern':['可き'],
-        },
-        */
         {
             'expected':'せっかく',
             'pattern':['折角']
@@ -84,7 +74,7 @@ function validateSentence(sentence) {
         {
             'expected':'たち',
             'pattern':['達'],
-            'tokenCheck':['名詞','接尾','達'] //中々検知しないので、個別に下で定義。。。
+            'tokenCheck':['名詞','接尾','達'] 
         },
         {
             'expected':'人たち',
@@ -110,15 +100,9 @@ function validateSentence(sentence) {
             'tokenCheck':['接続詞','*','尚']
         },
         {
-            'expected':'なかなか', //少々精度に不安あり
+            'expected':'なかなか', 
             'pattern':['中々']
         },
-        /*いい感じの形態素解析が思いつかないのでパス
-        {
-            'expected':'ほど',
-            'pattern':['程'],
-        },
-        */
         {
             'expected':'または',
             'pattern':['又は'],
@@ -153,7 +137,6 @@ function validateSentence(sentence) {
             'expected':'よほど',
             'pattern':['余程']
         },
-        // JTF-2.2.1 漢字で書く
         {
             'expected':'一切',
             'pattern':['いっさい']
@@ -171,12 +154,6 @@ function validateSentence(sentence) {
             'pattern':['しいて'],
             'tokenCheck':['副詞','一般','しいて']
         },
-        /* いい感じの検知方法が見当たらないのでパス
-        {
-            'expected':'中',
-            'pattern':['じゅう'],
-        },
-        */
         {
             'expected':'時々',
             'pattern':['ときどき'],
@@ -187,12 +164,6 @@ function validateSentence(sentence) {
             'pattern':['なにしろ'],
             'tokenCheck':['副詞','一般','なにしろ']
         },
-        /* いい感じの検知方法が見当たらないのでパス
-        {
-            'expected':'何も',
-            'pattern':['なにも'],
-        },
-        */
         {
             'expected':'何らかの',
             'pattern':['なんらかの'],
@@ -203,7 +174,6 @@ function validateSentence(sentence) {
             'pattern':['なんとも'],
             'tokenCheck':['副詞','一般','なんとも']
         },
-        // JTF-2.2.1 漢字を使い分ける
         {
             'expected':'箇所',
             'pattern':['個所']
@@ -212,12 +182,6 @@ function validateSentence(sentence) {
             'expected':'箇条書き',
             'pattern':['個条書き']
         },
-        /* いい感じの検知方法が見当たらないのでパス
-        {
-            'expected':'付属する',
-            'pattern':['附属する'],
-        },
-        */
         {
             'expected':'摩耗',
             'pattern':['磨耗']
@@ -257,34 +221,11 @@ function validateSentence(sentence) {
             'pattern':['したがう'],
             'tokenCheck':['動詞','自立','したがう']
         },
-        /* これは形態素解析でも無理だと思う。。。
-        {
-            'expected':'出す',
-            'pattern':['だす'],
-        },
-        {
-            'expected':'だす',
-            'pattern':['出す'],
-        },
-        */
         {
             'expected':'付く',
             'pattern':['つく'],
             'tokenCheck':['動詞','自立','つく']
         },
-        /* 活気付くや凍り付くが、一つの単語でTokenizeされてしまうため、検知できない。
-        {
-            'expected':'つき',
-            'pattern':['付き'],
-            'tokenCheck':['名詞','接尾','付き'] //手付きや目付きは一つの名詞になってしまうので検知できない。。。
-            // 好み
-        },
-        {
-            'expected':'とおり',
-            'pattern':['通り'],
-            'tokenCheck':['名詞','非自立','通り'] //「以下の通り」の通りは「名詞・一般」になってしまう。これを対象にしてしまうと、道路を意味する「通り」が平仮名になってしまう。。。
-        },
-        */
         {
             'expected':'以下のとおり',
             'pattern':['以下の通り'] // とりあえずこれは検知したいので個別に。
@@ -350,7 +291,6 @@ function validateSentence(sentence) {
             'expected':'ひときわ',
             'pattern':['一際']
         },
-        /* kuromojiのテストツールが、「一度」を「ひとたび」と認識しないので対応できない
         {
             'expected':'ひとたび',
             'pattern':['一度'],
@@ -364,12 +304,12 @@ function validateSentence(sentence) {
         {
             'expected':'ほか',
             'pattern':['他'],
-            'tokenCheck':['名詞','非自立','他'] // この他に必要なもの
+            'tokenCheck':['名詞','非自立','他'] 
         },
         {
             'expected':'ほか',
             'pattern':['外'],
-            'tokenCheck':['名詞','副詞可能','外'] // 思いの外が他でTokenizeされない。。。
+            'tokenCheck':['名詞','副詞可能','外'] 
         },
         {
             'expected':'思いのほか',
@@ -416,7 +356,6 @@ function validateSentence(sentence) {
             'pattern':['我々'],
             'tokenCheck':['名詞','代名詞','我々']
         },
-        // 過剰検知しそう。適宜形態素解析に切り替える
         {
             'expected':'わが',
             'pattern':['我が']

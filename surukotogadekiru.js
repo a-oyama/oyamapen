@@ -1,6 +1,5 @@
 function validateSentence(sentence) {
-    // 参考
-    // http://www.slideshare.net/yoshinobumachida5/lets-write-understandable-japanese-complete-version
+	
     // することができる問題
     var terms = [
       {

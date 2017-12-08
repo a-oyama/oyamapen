@@ -1,6 +1,4 @@
 function validateSentence(sentence) {
-    // 使い方はREADMEを参照ください。
-    // https://github.com/kongou-ae/redpen-validator/blob/master/README.md
     /*
     console = {
         log:print

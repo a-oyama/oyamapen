@@ -52,9 +52,7 @@ function validateSentence(sentence) {
 
         var result = 0;
         for (var i = 0; i < sentence.tokens.length; i++) {
-            // 検査できる＝今のＴｏｋｅｎの位置＋検査すべきＴｏｋｅｎの数が検査すべきＴｏｋｅｎの長さよりも小さい
             if ( i + terms.tokens.length - 1 < sentence.tokens.length ){
-                // 判定用変数を初期化
                 result = 0
                 for (var j = 0; j < terms.tokens.length; j++){
                     if (

@@ -2,7 +2,6 @@ function validateSentence(sentence) {
     // 口語ではなく文語を使う
 
     var terms = [
-        // http://www.ise.chuo-u.ac.jp/ISE/outline/Gmajor/nihongo/28.html
         {
             'expected':'過度に',
             'pattern':['あまりに']
@@ -26,8 +25,6 @@ function validateSentence(sentence) {
             'pattern':['してやる'],
             'tokenCheck':['動詞','自立','してやる']
         },
-        // 別途検知方法を考える
-        // してあげる、してない
         {
             'expected':'が',
             'pattern':['けど'],
@@ -41,8 +38,6 @@ function validateSentence(sentence) {
             'expected':'であるとき／であったらならば／なら',
             'pattern':['だったら']
         },
-        // 別途検知方法を考える
-        // 文頭のシリーズ しようがない
         {
             'expected':'のような',
             'pattern':['みたいな']
@@ -52,8 +47,6 @@ function validateSentence(sentence) {
             'pattern':['とか'],
             'tokenCheck':['助詞','並立助詞','とか']
         },
-        // 別途検知方法を考える
-        // したり
         {
             'expected':'ではなく',
             'pattern':['じゃなくて']
@@ -63,8 +56,6 @@ function validateSentence(sentence) {
             'pattern':['すごく'],
             'tokenCheck':['形容詞','自立','すごい']
         },
-        // 別途検知方法を考える
-        // したり
         {
             'expected':'比較的／やや／かなり／たいへん／きわめて',
             'pattern':['超'],
@@ -103,7 +94,6 @@ function validateSentence(sentence) {
             'expected':'複雑／難しい／困難',
             'pattern':['厄介']
         },
-        // http://www.ipentec.com/document/document.aspx?page=write-thesis-tips
         /*
         {
             'expected':'別の表現',
@@ -115,7 +105,6 @@ function validateSentence(sentence) {
             'expected':'別の表現',
             'pattern':['すると']
         },
-        // http://isabelle.cc.kyushu-u.ac.jp/~amano/how_to_write/japanese.html
         {
             'expected':'する必要がある',
             'pattern':['ないといけない']
@@ -128,7 +117,6 @@ function validateSentence(sentence) {
             'expected':'したがって/このため/そのため',
             'pattern':['それで']
         },
-        // http://www.ise.chuo-u.ac.jp/ISE/outline/Gmajor/nihongo/50.html
         {
             'expected':'済みません／申し訳ございません',
             'pattern':['すいません']
