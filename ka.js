@@ -1,6 +1,5 @@
 function validateSentence(sentence) {
-    // 参考
-    // https://www.jtf.jp/jp/style_guide/pdf/jtf_style_guide.pdf
+
     // 2.2.3. 一部の助数詞の表記
     // 助数詞にともなう「ヵ」、「か」、「カ」、「ヶ」、「ケ」、「箇」、「個」の表記は、原則として、ひらがなの「か」を使います。
 

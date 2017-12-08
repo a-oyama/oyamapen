@@ -1,8 +1,7 @@
 function validateSentence(sentence) {
-    // 参考
-    // https://www.jtf.jp/jp/style_guide/pdf/jtf_style_guide.pdf
-    // 2.1.5. カタカナ
-    // カタカナは「全角」で表記します。半角カタカナは特殊な用途を除いて、原則として使いません。
+
+    // カタカナ
+    // カタカナは「全角」で表記します。
     var terms = [
         {
             'expected':'[ァ-ンヲ]',
